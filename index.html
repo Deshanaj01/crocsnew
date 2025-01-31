@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocodile Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        #fact {
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #e8f5e9;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Crocodile Facts</h1>
+    <div id="fact">Click the button to see a crocodile fact!</div>
+    <button onclick="displayRandomFact()">Show Random Fact</button>
+
+    <script>
+        const crocodileFacts = [
+            {
+                "fact": "Ancient Species",
+                "description": "Crocodiles have existed for over 200 million years, making them one of the oldest living species on Earth."
+            },
+            {
+                "fact": "Cold-Blooded Reptiles",
+                "description": "Crocodiles are ectothermic (cold-blooded), meaning they rely on external sources to regulate their body temperature."
+            },
+            {
+                "fact": "Strong Bite Force",
+                "description": "They have one of the strongest bite forces in the animal kingdom, capable of exerting over 3,700 pounds of pressure per square inch."
+            },
+            {
+                "fact": "Excellent Swimmers",
+                "description": "Crocodiles can swim at speeds of up to 20 miles per hour (32 km/h) in short bursts, thanks to their powerful tails."
+            },
+            {
+                "fact": "Unique Communication",
+                "description": "Crocodiles communicate using a variety of sounds, including hissing, growling, and even vocalizations that can be heard underwater."
+            },
+            {
+                "fact": "Parental Care",
+                "description": "Unlike many reptiles, female crocodiles exhibit parental care, guarding their nests and helping hatchlings reach the water."
+            },
+            {
+                "fact": "Varied Diet",
+                "description": "Crocodiles are carnivorous and have a diverse diet that includes fish, birds, mammals, and even other reptiles."
+            },
+            {
+                "fact": "Camouflage Experts",
+                "description": "Their skin coloration and texture allow them to blend seamlessly into their environments, making them effective ambush predators."
+            },
+            {
+                "fact": "Long Lifespan",
+                "description": "Crocodiles can live for several decades, with some species known to live over 70 years in the wild."
+            },
+            {
+                "fact": "Different Species",
+                "description": "There are around 15 recognized species of crocodiles, including the Nile crocodile, saltwater crocodile, and American crocodile, each adapted to different habitats."
+            }
+        ];
+
+        function displayRandomFact() {
+            const randomIndex = Math.floor(Math.random() * crocodileFacts.length);
+            const fact = crocodileFacts[randomIndex];
+            document.getElementById('fact').innerHTML = `<strong>${fact.fact}</strong>: ${fact.description}`;
+        }
+    </script>
+
+</body>
+</html>
